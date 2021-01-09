@@ -21,3 +21,8 @@ Rails application.
 
 In the assignment, we will learn how to install Ruby and Rails, create a
 new Rails project and build a simple "About Me" webiste with two pages.
+
+## [Session 2 - Models](/session_2/README.md)
+
+We take a closer look at _Model_ of the MVC architecture and talk
+about databases, migrations and working with records.
