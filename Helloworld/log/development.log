@@ -1,0 +1,86 @@
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-09 16:35:20.717649"], ["updated_at", "2021-01-09 16:35:20.717649"]]
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2021-01-09 22:13:00 +0530
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/shriramu/.rvm/gems/ruby-2.7.2/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/shriramu/.rvm/gems/ruby-2.7.2/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 10.0ms | Allocations: 439)
+Completed 200 OK in 52ms (Views: 33.2ms | ActiveRecord: 0.0ms | Allocations: 3576)
+
+
+Started GET "/" for ::1 at 2021-01-09 22:55:49 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/shriramu/.rvm/gems/ruby-2.7.2/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/shriramu/.rvm/gems/ruby-2.7.2/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 10.2ms | Allocations: 215)
+Completed 200 OK in 27ms (Views: 16.3ms | Allocations: 826)
+
+
+Started GET "/" for ::1 at 2021-01-09 22:55:51 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/shriramu/.rvm/gems/ruby-2.7.2/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/shriramu/.rvm/gems/ruby-2.7.2/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 44)
+Completed 200 OK in 6ms (Views: 2.4ms | Allocations: 336)
+
+
+Started GET "/" for ::1 at 2021-01-09 23:01:25 +0530
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for ::1 at 2021-01-09 23:02:36 +0530
+Processing by PageController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering page/index.html.erb within layouts/application
+  Rendered page/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 105)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/shriramu/ruby on rails/hello_world/public/packs
+[Webpacker] Hash: 415a948d492e21802f43
+Version: webpack 4.45.0
+Time: 6944ms
+Built at: 09/01/2021 11:02:49 pm
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-d5a3c3b4dce84b5eb605.js    125 KiB  application  [emitted] [immutable]  application
+js/application-d5a3c3b4dce84b5eb605.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-d5a3c3b4dce84b5eb605.js js/application-d5a3c3b4dce84b5eb605.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 13033.0ms | Allocations: 17633)
+Completed 200 OK in 13053ms (Views: 13044.6ms | Allocations: 18787)
+
+
+Started GET "/about_me" for ::1 at 2021-01-10 21:31:26 +0530
+  
+SyntaxError (/home/shriramu/ruby on rails/hello_world/config/routes.rb:3: syntax error, unexpected local variable or method, expecting `end'
+  get '/about_me' to: 'page#about_me' 
+                  ^~
+):
+  
+config/routes.rb:3: syntax error, unexpected local variable or method, expecting `end'
+config/routes.rb:3: syntax error, unexpected local variable or method, expecting `end'
+config/routes.rb:3: syntax error, unexpected local variable or method, expecting `end'
+Started GET "/about_me" for ::1 at 2021-01-10 21:32:10 +0530
+Processing by PageController#about_me as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering page/about_me.html.erb within layouts/application
+  Rendered page/about_me.html.erb within layouts/application (Duration: 1.5ms | Allocations: 105)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 48.2ms | Allocations: 3342)
+Completed 200 OK in 57ms (Views: 52.8ms | Allocations: 3965)
+
+
